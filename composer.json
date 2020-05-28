@@ -17,6 +17,18 @@
         "asset": {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        "drupal/geysir": {
+            "type": "package",
+            "package": {
+                "name": "drupal/geysir",
+                "version": "droopler-patch",
+                "source": {
+                    "url": "git@git.drupal.org:project/geysir.git",
+                    "type": "git",
+                    "reference": "636a14e8003ccb0ef3df6370abc135acfa59eedf"
+                }
+            }
         }
     },
     "require": {
@@ -37,7 +49,7 @@
         "drupal/facets": "^1.0",
         "drupal/features": "^3.5",
         "drupal/field_group": "^3.0",
-        "drupal/geysir": "dev-1.x#636a14e8003ccb0ef3df6370abc135acfa59eedf",
+        "drupal/geysir": "droopler-patch",
         "drupal/google_analytics": "^2.2",
         "drupal/google_tag": "1.x-dev",
         "drupal/lazy": "^3.4",
