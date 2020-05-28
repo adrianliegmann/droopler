@@ -86,3 +86,32 @@ or modify `themes/custom/droopler_theme/scss/config/_all.scss` like this:
 
 After compiling SCSS, you can enjoy Droopler's 2.0 new functionalities while retaining the old color scheme.
 In case you modified the default Droopler color scheme, you might want to use this old color scheme file as a guideline to moving your color scheme onto 2.0
+
+# Droopler 2.1 #
+
+**WARNING!**
+
+* If you have a composer-based installation, please apply all the below steps.
+* If you have a drupal.org installation, you don't need to perform any additional steps.
+
+## 1. Enable patching ##
+
+Before you update Droopler, you will need a patching plugin for Composer, you can add it to your composer running the following command:
+`composer require cweagans/composer-patches:"^1.6"`
+
+## 2. Allow patches from dependencies ##
+
+In order to make patches from Droopler works in your project, you must have the following in your composer file:
+
+```json
+{
+  "require": {
+      "cweagans/composer-patches": "^1.6"
+  },
+  "extra": {
+      "enable-patching": true
+  }
+}
+```
+
+You can find more details on the [composer-patches repository page](https://github.com/cweagans/composer-patches)
