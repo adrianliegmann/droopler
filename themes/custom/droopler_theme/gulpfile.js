@@ -48,12 +48,20 @@
   // Dev SASS options
   const sassOptionsDev = {
     errLogToConsole: true,
-    outputStyle: 'expanded'
+    outputStyle: 'expanded',
+    quietDeps: true,
+    includePaths: [
+      'node_modules',
+    ]
   };
 
   // Prod SASS options
   const sassOptionsProd = {
-    outputStyle: 'compressed'
+    outputStyle: 'compressed',
+    quietDeps: true,
+    includePaths: [
+      'node_modules',
+    ]
   };
 
   // Autoprefixer options
