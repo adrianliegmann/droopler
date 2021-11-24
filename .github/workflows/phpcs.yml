@@ -35,5 +35,8 @@ jobs:
       - name: Check composer config
         run: composer config --list
 
+      - name: List folder
+        run: ls -al ~/.composer/
+
       - name: Run PHP_CodeSniffer
         run: phpcs -i
