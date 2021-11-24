@@ -27,16 +27,13 @@ jobs:
         with:
           php-version: '7.4'
           coverage: none
-          tools: phpcs
-
-      # Install dependencies and handle caching in one go.
-      # Dependencies need to be installed to make sure the PHPUnit classes are recognized.
-      # @link https://github.com/marketplace/actions/install-composer-dependencies
-      - name: Install Composer dependencies
-        uses: "ramsey/composer-install@v1"
+          tools: composer, phpcs
 
       - name: Download Drupal coding standards
         run: composer global require --no-progress --no-suggest --no-scripts --no-plugins --optimize-autoloader drupal/coder
+
+      - name: Check composer config
+        run: composer config --list
 
       - name: Run PHP_CodeSniffer
         run: phpcs -i
