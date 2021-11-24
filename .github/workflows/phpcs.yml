@@ -36,7 +36,7 @@ jobs:
         run: composer config --list
 
       - name: List folder
-        run: ls -al ~/.composer/
+        run: ls -al ~/.composer/vendor/drupal/coder/
 
       - name: Run PHP_CodeSniffer
         run: phpcs -i
