@@ -1,4 +1,4 @@
-name: Verify Drupal coding standards
+name: Drupal coding standards
 on: [push]
 jobs:
   verify:
