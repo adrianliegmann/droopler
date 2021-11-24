@@ -1,5 +1,6 @@
 # Droopler profile for Drupal
 <img src="https://droopler-demo.droptica.com/themes/custom/droopler_subtheme/logo.svg" width=300 alt="Droopler Logo" />
+[![Build Status](https://github.com/adrianliegmann/droopler/workflows/Verify%20Drupal%20coding%20standards/badge.svg?branch=master)](https://github.com/adrianliegmann/droopler/actions)
 
 ## What is Droopler?
 Droopler is a Drupal 8/9 profile designed to build corporate websites. It's based on the latest frontend technologies, including Bootstrap 4. The maintainer of Droopler is [Droptica](https://www.droptica.com).
