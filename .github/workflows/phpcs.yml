@@ -32,11 +32,8 @@ jobs:
       - name: Download Drupal coding standards
         run: composer global require --no-progress --no-suggest --no-scripts --no-plugins --optimize-autoloader drupal/coder
 
-      - name: Check composer config
-        run: composer config --list
-
-      - name: List folder
-        run: ls -al ~/.composer/vendor/drupal/coder/
+      - name: Add Drupal coding standards to phpcs
+        run: phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer
 
       - name: Run PHP_CodeSniffer
         run: phpcs -i
