@@ -35,5 +35,8 @@ jobs:
       - name: Install Composer dependencies
         uses: "ramsey/composer-install@v1"
 
+      - name: Download Drupal coding standards
+        run: composer global require --no-progress --no-suggest --no-scripts --no-plugins --optimize-autoloader drupal/coder
+
       - name: Run PHP_CodeSniffer
         run: phpcs -i
